@@ -74,7 +74,7 @@ jobs:
       run: |
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
-        echo "src-git ssrp https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
+        echo "src-git ssrp https://github.com/1443213244/ss-plus.git" >> ./feeds.conf.default
 
     - name: 设置缓存
       uses: klever1988/cachewrtbuild@main
@@ -91,7 +91,7 @@ jobs:
     - name: 自定义安装源
       working-directory: ./openwrt
       run: |
-        git clone https://github.com/kenzok8/small-package package/small-package
+        #git clone https://github.com/kenzok8/small-package package/small-package
         git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 
     - name: 自定义配置文件Lean
